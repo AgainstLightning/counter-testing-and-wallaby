@@ -19,3 +19,17 @@ test('it sets count text to startValue prop when provided', () => {
   const count = screen.getByTestId("count");
   expect(count).toHaveTextContent("4");
 });
+
+test('it renders the add button', () => {
+  render(<App />);
+  const addBtn = screen.getByTestId("addBtn");
+  expect(addBtn).toBeInTheDocument();
+  expect(addBtn).toHaveTextContent("+");
+});
+
+test('it renders the subtract button', () => {
+  render(<App />);
+  const subtractBtn = screen.getByTestId("subtractBtn");
+  expect(subtractBtn).toBeInTheDocument();
+  expect(subtractBtn).toHaveTextContent("-");
+});

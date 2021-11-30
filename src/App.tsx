@@ -6,6 +6,8 @@ function App({startingValue = 0} : {startingValue?: number}) {
     <div className="App">
       <h1>Awesome Counter</h1>
       <p data-testid="count">{startingValue}</p>
+      <button data-testid="addBtn">+</button>
+      <button data-testid="subtractBtn">-</button>
     </div>
   );
 }
